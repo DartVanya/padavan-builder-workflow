@@ -1,4 +1,4 @@
-name: Build firmware
+name: Build firmware - R3G
 
 on:
   workflow_dispatch:
@@ -16,8 +16,8 @@ jobs:
 
     - name: Get variables
       run: |
-        sed -i 's|\r$||g' variables build.config
-        . <(cat variables build.config)
+        sed -i 's|\r$||g' variables build.r3g.config
+        . <(cat variables build.r3g.config)
         PADAVAN_THEMES="${PADAVAN_THEMES[*]}"
         for v in "${!PADAVAN_@}" "${!CONFIG_@}"; do
           echo "$v=${!v}" >> $GITHUB_ENV
@@ -47,7 +47,7 @@ jobs:
 
     - name: Build firmware
       run: |
-        cp build.config $PADAVAN_ICP/trunk/.config
+        cp build.r3g.config $PADAVAN_ICP/trunk/.config
         cd $PADAVAN_ICP/trunk
         ./clear_tree.sh
         ./build_firmware.sh
@@ -72,7 +72,7 @@ jobs:
         retention-days: 7
         path: |
           ${{ env.FW_FILE_NAME }}
-          build.config
+          build.r3g.config
 
     - name: Check firmware size
       run: |
