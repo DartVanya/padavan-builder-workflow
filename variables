@@ -1,7 +1,7 @@
-PADAVAN_REPO="https://github.com/DartVanya/padavan-ng-2.git"
-PADAVAN_BRANCH="mi-3-large-fw"
+PADAVAN_REPO="https://github.com/nilabsent/padavan-ng.git"
+PADAVAN_BRANCH="master"
 PADAVAN_COMMIT="HEAD"
-PADAVAN_ICP="padavan-ng-2"
+PADAVAN_ICP="padavan-ng"
 PADAVAN_TOOLCHAIN_URL="https://gitlab.com/api/v4/projects/hadzhioglu%2Fpadavan-ng/packages/generic/toolchain/latest/toolchain.tzst"
 
 PADAVAN_THEMES_REPO="https://gitlab.com/hadzhioglu/padavan-themes.git"
